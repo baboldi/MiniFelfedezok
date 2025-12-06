@@ -1,0 +1,17 @@
+Készítő: Bányai Boldizsár
+
+Működő weboldal URL címe:
+https://felhasznaloneved.github.io/MiniFelfedezok
+
+A weboldal témája (2 mondat):
+A MiniFelfedezők egy gyerekeknek szóló, játékos oktató weboldal, ahol az állatokkal, színekkel és számokkal ismerkedhetnek meg. A cél, hogy az alapokat könnyen és mókásan elsajátíthassák.
+
+Saját JavaScript kód helye és működése:
+- js/game.js: memóriajáték, amelyben állat-emoji párokat kell megtalálni. A kártyák sorrendjét a program minden új játék előtt véletlenszerűen összekeveri, számolja a lépéseket, és a végén kiírja, hány lépésből sikerült a játék.
+- js/form-validation.js: a quiz.html oldalon található űrlap mezőit ellenőrzi (név, e-mail, életkor, kedvenc állat, nehézség, adatkezelés). Hibás vagy hiányzó adatok esetén hibaüzenetet ír ki a mező alatt.
+
+Használt egyedi font:
+Google Fonts: "Baloo 2" és "Poppins" (css/style.css fájlban importálva).
+
+Felhasznált külső források:
+- Google Fonts (betűtípusok): https://fonts.google.com

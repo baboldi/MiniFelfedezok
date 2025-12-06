@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta name="description" content="MiniFelfedezők – memóriajáték gyerekeknek állatfigurákkal.">
+  <title>MiniFelfedezők – Játékok</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vezetékneved Keresztneved">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="MiniFelfedezők logó" class="logo">
+      <span class="site-title">MiniFelfedezők</span>
+    </div>
+    <button class="nav-toggle" aria-label="Menü megnyitása">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="lessons.html">Tananyagok</a></li>
+        <li><a href="games.html" class="active">Játékok</a></li>
+        <li><a href="quiz.html">Kvíz & Kapcsolat</a></li>
+        <li><a href="gallery.html">Galéria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="games-page">
+    <section>
+      <h1>Memóriajáték – keresd a párokat!</h1>
+      <p>Kattints a kártyákra, és próbáld megjegyezni, hol vannak az állatpárok.</p>
+      <button id="restart-game" class="btn primary">Új játék</button>
+      <p id="moves-counter">Lépések: 0</p>
+
+      <div id="memory-game" class="memory-grid">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 MiniFelfedezők – Készítette: Bányai Boldizsár</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

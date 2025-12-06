@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta name="description" content="MiniFelfedezők – gyerek kvíz és kapcsolatfelvételi űrlap.">
+  <title>MiniFelfedezők – Kvíz & Kapcsolat</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vezetékneved Keresztneved">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="MiniFelfedezők logó" class="logo">
+      <span class="site-title">MiniFelfedezők</span>
+    </div>
+    <button class="nav-toggle" aria-label="Menü megnyitása">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="lessons.html">Tananyagok</a></li>
+        <li><a href="games.html">Játékok</a></li>
+        <li><a href="quiz.html" class="active">Kvíz & Kapcsolat</a></li>
+        <li><a href="gallery.html">Galéria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="quiz-page">
+    <section>
+      <h1>Mini kvíz & kapcsolat</h1>
+      <p>Kérlek, töltsd ki az űrlapot, majd válaszolj néhány egyszerű kérdésre.</p>
+
+      <form id="quiz-form" novalidate>
+        <div class="form-group">
+          <label for="childName">Gyermek neve*</label>
+          <input type="text" id="childName" name="childName" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="parentEmail">Szülő e-mail címe*</label>
+          <input type="email" id="parentEmail" name="parentEmail" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="childAge">Gyermek életkora* (3–10)</label>
+          <input type="number" id="childAge" name="childAge" min="3" max="10" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="playDate">Melyik napon szeretnétek játszani?</label>
+          <input type="date" id="playDate" name="playDate">
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="favAnimal">Kedvenc állat*</label>
+          <select id="favAnimal" name="favAnimal" required>
+            <option value="">Válassz egyet...</option>
+            <option value="lion">Oroszlán</option>
+            <option value="elephant">Elefánt</option>
+            <option value="dog">Kutya</option>
+            <option value="cat">Macska</option>
+          </select>
+          <small class="error-message"></small>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Milyen nehéz legyen a feladat?*</legend>
+          <label>
+            <input type="radio" name="difficulty" value="easy" required> Könnyű
+          </label>
+          <label>
+            <input type="radio" name="difficulty" value="medium"> Közepes
+          </label>
+          <label>
+            <input type="radio" name="difficulty" value="hard"> Nehéz
+          </label>
+          <small class="error-message"></small>
+        </fieldset>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+            Elfogadom az adatkezelési tájékoztatót.*
+          </label>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Üzenet / megjegyzés</label>
+          <textarea id="message" name="message" rows="4" placeholder="Pl. melyik témát szereti a gyermek legjobban?"></textarea>
+          <small class="error-message"></small>
+        </div>
+
+        <button type="submit" class="btn primary">Küldés</button>
+        <p id="form-success" class="success-message" hidden>Köszönjük, az űrlapot sikeresen elküldted!</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 MiniFelfedezők – Készítette: Bányai Boldizsár</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+</html>

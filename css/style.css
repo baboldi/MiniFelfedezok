@@ -1,0 +1,306 @@
+:root {
+  --bg-light: #fdf6ff;
+  --bg-card: #ffffff;
+  --primary: #ff8a5c;
+  --primary-dark: #ff7043;
+  --accent: #4dd0e1;
+  --text: #333333;
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg-light);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* HEADER + NAV */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.site-title {
+  font-family: "Baloo 2", cursive;
+  font-size: 1.4rem;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.main-nav a.active {
+  color: var(--primary);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+}
+
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+.hero-text h1 {
+  font-family: "Baloo 2", cursive;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  max-width: 32rem;
+}
+
+/* CARDS */
+
+.card-grid {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.info-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.info-card h2 {
+  margin-top: 0;
+}
+
+/* GOMBOK */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+/* LESSON GRID */
+
+.lesson-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  padding: 1.5rem;
+}
+
+/* NUMBERS LIST */
+
+.numbers-list {
+  padding: 0 1.5rem 2rem;
+}
+
+/* GALLERY GRID */
+
+.gallery-grid {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+/* MEMORY GAME GRID */
+
+.memory-grid {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 70px);
+  justify-content: center;
+}
+
+.memory-card {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* FORMOK */
+
+.quiz-page form {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.form-group,
+fieldset.form-group {
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0;
+}
+
+label,
+legend {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.3rem;
+}
+
+.error-message {
+  color: #e53935;
+  font-size: 0.85rem;
+}
+
+.success-message {
+  color: #2e7d32;
+}
+
+/* FOOTER */
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* MEDIA QUERY – mobil nézet */
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(3, 70px);
+  }
+
+  .main-nav ul {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+    display: none;
+  }
+
+  .main-nav ul.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+.color-red {
+  color: #e53935;
+  font-weight: 600;
+}
+
+.color-blue {
+  color: #1e88e5;
+  font-weight: 600;
+}
+
+.color-green {
+  color: #43a047;
+  font-weight: 600;
+}
+
+.color-yellow {
+  color: #fdd835;
+  font-weight: 600;
+}
+.kep{
+  height:"300";
+  float: right;
+}
