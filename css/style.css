@@ -253,11 +253,27 @@ input[type="checkbox"] {
   .hero {
     grid-template-columns: 1fr;
   }
+  
+  .site-header {
+    justify-content: space-between;
+  }
 
+  .nav-toggle {
+    margin-left: auto;
+  }
   .card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .hero-image {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    height: auto;
+  }
   .memory-grid {
     grid-template-columns: repeat(3, 70px);
   }
@@ -299,8 +315,4 @@ input[type="checkbox"] {
 .color-yellow {
   color: #fdd835;
   font-weight: 600;
-}
-.kep{
-  height:"300";
-  float: right;
 }
