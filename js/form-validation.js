@@ -85,6 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      return email.includes("@") && email.includes(".");
   }
 });
