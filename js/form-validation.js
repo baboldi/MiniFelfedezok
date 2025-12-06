@@ -19,27 +19,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const difficultyInputs = document.querySelectorAll("input[name='difficulty']");
     const acceptTerms = document.getElementById("acceptTerms");
 
+    // 1: Gyermek neve – nem üres, min 2 karakter
     if (!childName.value.trim() || childName.value.trim().length < 2) {
       showError(childName, "Kérlek add meg a nevet (legalább 2 karakter)!");
       isValid = false;
     }
 
+    // 2: E-mail – egyszerű ellenőrzés
     if (!parentEmail.value.trim() || !isValidEmail(parentEmail.value)) {
       showError(parentEmail, "Kérlek érvényes e-mail címet adj meg!");
       isValid = false;
     }
 
+    // 3: Életkor – 3 és 10 között
     const ageValue = Number(childAge.value);
     if (Number.isNaN(ageValue) || ageValue < 3 || ageValue > 10) {
       showError(childAge, "Az életkornak 3 és 10 között kell lennie.");
       isValid = false;
     }
 
+    // 4: Kedvenc állat – ki kell választani
     if (!favAnimal.value) {
       showError(favAnimal, "Kérlek válaszd ki a kedvenc állatot!");
       isValid = false;
     }
 
+    // 5: Nehézség – egy rádió gomb kötelező
     let difficultySelected = false;
     difficultyInputs.forEach((input) => {
       if (input.checked) difficultySelected = true;
@@ -50,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       isValid = false;
     }
 
+    // 6: Adatkezelés elfogadása – checkbox
     if (!acceptTerms.checked) {
       showError(acceptTerms, "Az adatkezelési feltételek elfogadása kötelező.");
       isValid = false;
@@ -78,13 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
     errorMessages.forEach((el) => (el.textContent = ""));
     const errorInputs = document.querySelectorAll(".has-error");
     errorInputs.forEach((el) => el.classList.remove("has-error"));
-    const successMsg = document.getElementById("form-success");
     if (successMsg) {
       successMsg.hidden = true;
     }
   }
 
   function isValidEmail(email) {
-      return email.includes("@") && email.includes(".");
+    // Szuper egyszerű, de a beadandóhoz teljesen elég:
+    return email.includes("@") && email.includes(".");
+    // Ha regex kellene, akkor ez is jó lenne:
+    // return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 });
