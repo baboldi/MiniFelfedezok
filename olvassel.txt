@@ -1,7 +1,7 @@
 Készítő: Bányai Boldizsár
 
 Működő weboldal URL címe:
-https://felhasznaloneved.github.io/MiniFelfedezok
+https://baboldi.github.io/MiniFelfedezok/
 
 A weboldal témája (2 mondat):
 A MiniFelfedezők egy gyerekeknek szóló, játékos oktató weboldal, ahol az állatokkal, színekkel és számokkal ismerkedhetnek meg. A cél, hogy az alapokat könnyen és mókásan elsajátíthassák.
